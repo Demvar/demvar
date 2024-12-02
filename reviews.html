@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demvar - Отзывы</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #1e90ff;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .reviews {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .review {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review h4 {
+            color: #007bff;
+        }
+
+        .review p {
+            font-size: 1rem;
+        }
+
+        .review-form {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .review-form button {
+            padding: 12px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .review-form button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Demvar - Отзывы</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Заказ услуг</a>
+        <a href="reviews.html">Отзывы</a>
+    </nav>
+
+    <section>
+        <h2>Отзывы наших клиентов</h2>
+        <div class="reviews">
+            <div class="review">
+                <h4>Иван Петров</h4>
+                <p>Прекрасная работа по установке сигнализации. Все работает!</p>
+            </div>
+            <div class="review">
+                <h4>Ольга Смирнова</h4>
+                <p>Довольна камерами наблюдения. Мастера сделали все качественно.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Оставьте отзыв</h2>
+        <form class="review-form" action="https://formsubmit.co/maximchalyy123@gmail.com" method="POST">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+            <label for="review">Ваш отзыв:</label>
+            <textarea id="review" name="review" rows="5" placeholder="Введите ваш отзыв" required></textarea>
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://nicknamefor.github.io/thank/">
+            <button type="submit">Оставить отзыв</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2024 Demvar. Все права защищены.
+    </footer>
+</body>
+</html>
