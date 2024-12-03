@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demvar - Безопасность и надежность</title>
+    <title>Demvar - Лучшие решения для безопасности</title>
     <style>
-        /* Общие стили */
+        /* Основные стили */
         * {
             margin: 0;
             padding: 0;
@@ -13,9 +13,8 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
-            color: #333;
             line-height: 1.6;
         }
 
@@ -27,12 +26,12 @@
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         nav {
@@ -95,72 +94,11 @@
             background: #0056b3;
         }
 
-        .services {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .service {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            flex: 1 1 calc(33% - 20px);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .service img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .service h3 {
-            margin-bottom: 10px;
-            color: #007BFF;
-        }
-
-        .service p {
-            font-size: 1rem;
-        }
-
-        .faq {
-            margin-top: 40px;
-        }
-
-        .faq h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #4CAF50;
-        }
-
-        .faq-item p {
-            font-size: 1rem;
-        }
-
         footer {
             background: #333;
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 20px;
         }
 
         .chat-button {
@@ -193,7 +131,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             flex-direction: column;
-            z-index: 1000;
         }
 
         .chat-header {
@@ -242,55 +179,23 @@
     </header>
 
     <nav>
-        <a href="#hero">Главная</a>
-        <a href="#services">Услуги</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Контакты</a>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="contact.html">Контакты</a>
     </nav>
 
-    <section id="hero" class="hero">
+    <section class="hero">
         <h2>Надежность и безопасность</h2>
-        <p>Лучшие решения для вашего дома и офиса.</p>
-        <a href="#services" class="button">Наши услуги</a>
-    </section>
-
-    <section id="services">
-        <h2>Наши услуги</h2>
-        <div class="services">
-            <div class="service">
-                <img src="camera.jpg" alt="Установка камер">
-                <h3>Установка камер</h3>
-                <p>Обеспечьте контроль и безопасность с помощью видеонаблюдения.</p>
-            </div>
-            <div class="service">
-                <img src="alarm.jpg" alt="Установка сигнализации">
-                <h3>Установка сигнализации</h3>
-                <p>Системы защиты для вашего дома и бизнеса.</p>
-            </div>
-            <div class="service">
-                <img src="wiring.jpg" alt="Прокладка проводки">
-                <h3>Прокладка проводки</h3>
-                <p>Качественная электропроводка для любых помещений.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="faq">
-        <h3>Часто задаваемые вопросы</h3>
-        <div class="faq-item">
-            <h4>Сколько времени занимает установка камер?</h4>
-            <p>Средняя установка занимает от 2 до 4 часов в зависимости от сложности проекта.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Какова гарантия на ваши услуги?</h4>
-            <p>Мы предоставляем гарантию 12 месяцев на все наши услуги.</p>
-        </div>
+        <p>Защищайте свой дом и офис с помощью наших профессиональных решений.</p>
+        <a href="services.html" class="button">Наши услуги</a>
     </section>
 
     <footer>
         <p>&copy; 2024 Demvar. Все права защищены.</p>
     </footer>
 
+    <!-- Чат с поддержкой -->
     <button class="chat-button" onclick="toggleChat()">💬</button>
     <div class="chat-container" id="chat">
         <div class="chat-header">Чат поддержки</div>
@@ -301,4 +206,24 @@
         </div>
     </div>
 
-    <
+    <script>
+        function toggleChat() {
+            const chat = document.getElementById("chat");
+            chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+        }
+
+        function sendMessage() {
+            const input = document.getElementById("chatInput");
+            const messages = document.getElementById("chatMessages");
+
+            if (input.value.trim()) {
+                const message = document.createElement("div");
+                message.textContent = input.value;
+                messages.appendChild(message);
+                input.value = "";
+                messages.scrollTop = messages.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
