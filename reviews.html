@@ -66,44 +66,6 @@
             font-size: 1rem;
         }
 
-        .review-form {
-            max-width: 800px;
-            margin: 30px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .review-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .review-form input, .review-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .review-form button {
-            padding: 12px;
-            font-size: 1.2rem;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .review-form button:hover {
-            background-color: #0056b3;
-        }
-
         footer {
             text-align: center;
             padding: 10px;
@@ -121,7 +83,7 @@
         <a href="index.html">Главная</a>
         <a href="services.html">Заказ услуг</a>
         <a href="reviews.html">Отзывы</a>
-        <a href="support.html">Поддержка</a>
+        <a href="contact.html">Контакты</a>
     </nav>
 
     <section>
@@ -136,21 +98,6 @@
                 <p>Довольна камерами наблюдения. Мастера сделали все качественно.</p>
             </div>
         </div>
-    </section>
-
-    <section>
-        <h2>Оставьте отзыв</h2>
-        <form class="review-form" action="https://formsubmit.co/your-email@example.com" method="POST">
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-
-            <label for="review">Ваш отзыв:</label>
-            <textarea id="review" name="review" rows="5" placeholder="Введите ваш отзыв" required></textarea>
-
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://your-website.github.io/thank-you.html">
-            <button type="submit">Оставить отзыв</button>
-        </form>
     </section>
 
     <footer>
